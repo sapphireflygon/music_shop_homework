@@ -1,4 +1,4 @@
 package behaviours;
 
-public class ISell {
+public interface ISell {
 }
