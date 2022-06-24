@@ -6,14 +6,14 @@ public class HurdyGurdy extends Instrument implements IPlay {
 
     private int numberOfStrings;
     private String wheelSize;
-    private boolean hasBuzzingBridge;
+    private boolean buzzingBridge;
 
     public HurdyGurdy(String material, String classification, int numberOfStrings, String wheelSize,
-                      boolean hasBuzzingBridge) {
+                      boolean buzzingBridge) {
         super(material, classification);
         this.numberOfStrings = numberOfStrings;
         this.wheelSize = wheelSize;
-        this.hasBuzzingBridge = hasBuzzingBridge;
+        this.buzzingBridge = buzzingBridge;
     }
 
     public int getNumberOfStrings() {
@@ -25,7 +25,7 @@ public class HurdyGurdy extends Instrument implements IPlay {
     }
 
     public boolean hasBuzzingBridge() {
-        return this.hasBuzzingBridge;
+        return this.buzzingBridge;
     }
 
     @Override
