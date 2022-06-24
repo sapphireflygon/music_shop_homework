@@ -1,6 +1,8 @@
 package instruments;
 
-public class HurdyGurdy extends Instrument{
+import behaviours.IPlay;
+
+public class HurdyGurdy extends Instrument implements IPlay {
 
     private int numberOfStrings;
     private String wheelSize;
@@ -24,5 +26,10 @@ public class HurdyGurdy extends Instrument{
 
     public boolean hasBuzzingBridge() {
         return this.hasBuzzingBridge;
+    }
+
+    @Override
+    public String play() {
+        return "hurdygurdy";
     }
 }

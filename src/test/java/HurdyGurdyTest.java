@@ -39,4 +39,9 @@ public class HurdyGurdyTest {
         assertTrue(hurdyGurdy.hasBuzzingBridge());
     }
 
+    @Test
+    public void canPlay(){
+        assertEquals("hurdygurdy", hurdyGurdy.play());
+    }
+
 }
