@@ -37,4 +37,9 @@ public class GlockenspielTest {
     public void canCalculateMarkup(){
         assertEquals(3.00, glockenspiel.calculateMarkup(), 0.01);
     }
+
+    @Test
+    public void canPlay(){
+        assertEquals("ting ting", glockenspiel.play());
+    }
 }
