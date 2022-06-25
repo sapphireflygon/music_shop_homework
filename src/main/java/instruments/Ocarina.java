@@ -9,8 +9,7 @@ public class Ocarina extends Instrument implements IPlay {
     private String pitch;
 
     public Ocarina(String material, String classification, double buyingPrice, double sellingPrice, int numberOfHoles,
-                   String colour,
-                   String pitch) {
+                   String colour, String pitch) {
         super(material, classification, buyingPrice, sellingPrice);
         this.numberOfHoles = numberOfHoles;
         this.colour = colour;

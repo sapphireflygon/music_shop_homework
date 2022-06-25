@@ -12,7 +12,7 @@ public class Cornetto extends Instrument implements IPlay {
     }
 
     public String getColour() {
-        return colour;
+        return this.colour;
     }
 
     @Override
