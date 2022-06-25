@@ -10,7 +10,7 @@ public class CornettoTest {
 
     @Before
     public void before(){
-        cornetto = new Cornetto("wood and ivory", "brass-like wind", "ebony");
+        cornetto = new Cornetto("wood and ivory", "brass", 50.25, 65.25, "ebony");
     }
 
     @Test
@@ -20,7 +20,7 @@ public class CornettoTest {
 
     @Test
     public void hasClassification(){
-        assertEquals("brass-like wind", cornetto.getClassification());
+        assertEquals("brass", cornetto.getClassification());
     }
 
     @Test
@@ -31,5 +31,20 @@ public class CornettoTest {
     @Test
     public void canPlay(){
         assertEquals("doodododooo", cornetto.play());
+    }
+
+    @Test
+    public void hasBuyingPrice(){
+        assertEquals(50.25, cornetto.getBuyingPrice(), 0.00);
+    }
+
+    @Test
+    public void hasSellingPrice(){
+        assertEquals(65.25, cornetto.getSellingPrice(), 0.00);
+    }
+
+    @Test
+    public void canCalculateMarkup(){
+        assertEquals(15.00, cornetto.calculateMarkup(), 0.00);
     }
 }

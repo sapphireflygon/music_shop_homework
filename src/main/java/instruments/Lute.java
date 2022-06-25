@@ -6,8 +6,8 @@ public class Lute extends Instrument implements IPlay {
 
     private int numberOfStrings;
 
-    public Lute(String material, String classification, int numberOfStrings) {
-        super(material, classification);
+    public Lute(String material, String classification, double buyingPrice, double sellingPrice, int numberOfStrings) {
+        super(material, classification, buyingPrice, sellingPrice);
         this.numberOfStrings = numberOfStrings;
     }
 

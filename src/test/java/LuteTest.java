@@ -11,7 +11,7 @@ public class LuteTest {
 
     @Before
     public void before(){
-        lute = new Lute("wood", "plucked string", 15);
+        lute = new Lute("wood", "plucked string", 86.10, 100.00, 15);
     }
 
     @Test
@@ -32,5 +32,20 @@ public class LuteTest {
     @Test
     public void canPlay(){
         assertEquals("twang", lute.play());
+    }
+
+    @Test
+    public void hasBuyingPrice(){
+        assertEquals(86.10, lute.getBuyingPrice(), 0.00);
+    }
+
+    @Test
+    public void hasSellingPrice(){
+        assertEquals(100.00, lute.getSellingPrice(), 0.00);
+    }
+
+    @Test
+    public void canCalculateMarkup(){
+        assertEquals(13.90, lute.calculateMarkup(), 0.01);
     }
 }

@@ -8,9 +8,10 @@ public class HurdyGurdy extends Instrument implements IPlay {
     private String wheelSize;
     private boolean buzzingBridge;
 
-    public HurdyGurdy(String material, String classification, int numberOfStrings, String wheelSize,
+    public HurdyGurdy(String material, String classification, double buyingPrice,
+                      double sellingPrice, int numberOfStrings, String wheelSize,
                       boolean buzzingBridge) {
-        super(material, classification);
+        super(material, classification, buyingPrice, sellingPrice);
         this.numberOfStrings = numberOfStrings;
         this.wheelSize = wheelSize;
         this.buzzingBridge = buzzingBridge;

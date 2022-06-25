@@ -1,22 +1,38 @@
 package instruments;
 
-public abstract class Instrument {
+import behaviours.ISell;
+
+public abstract class Instrument implements ISell {
 
     private String material;
     private String classification;
-//    private String tuning;
+    private double buyingPrice;
+    private double sellingPrice;
 
-
-    public Instrument(String material, String classification) {
+    public Instrument (String material, String classification, double buyingPrice, double sellingPrice) {
         this.material = material;
         this.classification = classification;
+        this.buyingPrice = buyingPrice;
+        this.sellingPrice = sellingPrice;
     }
 
     public String getMaterial() {
-        return material;
+        return this.material;
     }
 
     public String getClassification() {
-        return classification;
+        return this.classification;
+    }
+
+    public double getBuyingPrice() {
+        return this.buyingPrice;
+    }
+
+    public double getSellingPrice() {
+        return this.sellingPrice;
+    }
+
+    public double calculateMarkup(){
+        return this.sellingPrice - this.buyingPrice;
     }
 }

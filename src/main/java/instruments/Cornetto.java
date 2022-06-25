@@ -6,8 +6,8 @@ public class Cornetto extends Instrument implements IPlay {
 
     private String colour;
 
-    public Cornetto(String material, String classification, String colour) {
-        super(material, classification);
+    public Cornetto(String material, String classification, double buyingPrice, double sellingPrice, String colour) {
+        super(material, classification, buyingPrice, sellingPrice);
         this.colour = colour;
     }
 

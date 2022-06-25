@@ -11,7 +11,7 @@ public class OcarinaTest {
 
     @Before
     public void before(){
-        ocarina = new Ocarina("ceramic", "wind", 6, "blue", "tenor");
+        ocarina = new Ocarina("ceramic", "wind", 18.50, 20.00, 6, "blue", "tenor");
     }
 
     @Test
@@ -42,5 +42,20 @@ public class OcarinaTest {
     @Test
     public void canPlay(){
         assertEquals("doo doo doo", ocarina.play());
+    }
+
+    @Test
+    public void hasBuyingPrice(){
+        assertEquals(18.50, ocarina.getBuyingPrice(), 0.00);
+    }
+
+    @Test
+    public void hasSellingPrice(){
+        assertEquals(20.00, ocarina.getSellingPrice(), 0.00);
+    }
+
+    @Test
+    public void canCalculateMarkup(){
+        assertEquals(1.50, ocarina.calculateMarkup(), 0.01);
     }
 }

@@ -11,7 +11,7 @@ public class HurdyGurdyTest {
 
     @Before
     public void before(){
-        hurdyGurdy = new HurdyGurdy("wood", "bowed string", 6, "large", true);
+        hurdyGurdy = new HurdyGurdy("wood", "bowed string", 350.99, 400.99, 6, "large", true);
     }
 
     @Test
@@ -44,4 +44,18 @@ public class HurdyGurdyTest {
         assertEquals("hurdygurdy", hurdyGurdy.play());
     }
 
+    @Test
+    public void hasBuyingPrice(){
+        assertEquals(350.99, hurdyGurdy.getBuyingPrice(), 0.00);
+    }
+
+    @Test
+    public void hasSellingPrice(){
+        assertEquals(400.99, hurdyGurdy.getSellingPrice(), 0.00);
+    }
+
+    @Test
+    public void canCalculateMarkup(){
+        assertEquals(50, hurdyGurdy.calculateMarkup(), 0.01);
+    }
 }

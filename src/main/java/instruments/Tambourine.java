@@ -6,8 +6,9 @@ public class Tambourine extends Instrument implements IPlay {
 
     private boolean drumHead;
 
-    public Tambourine(String material, String classification, boolean drumHead) {
-        super(material, classification);
+    public Tambourine(String material, String classification, double buyingPrice, double sellingPrice,
+                      boolean drumHead) {
+        super(material, classification, buyingPrice, sellingPrice);
         this.drumHead = drumHead;
     }
 
